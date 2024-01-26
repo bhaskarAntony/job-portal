@@ -34,7 +34,7 @@ function PageView() {
   }, []);
   return (
     <div className='overflow-hidden m-0'>
-    <div className=" container-fluid job-top p-2 py-5">
+    <div className=" container-fluid job-top p-4 py-5">
         <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-md-8">
                 <div className="job-left d-flex gap-4 flex-wrap align-items-center">
@@ -58,7 +58,7 @@ function PageView() {
             </div>
         </div>
     </div>
-    <div className="container-fluid job-body p-2 p-md-4">
+    <div className="container-fluid job-body p-4 p-md-4 py-5">
        <div className="row">
         <div className="col-12 col-sm-12 col-md-8">
         <div className="jd">
@@ -72,7 +72,7 @@ function PageView() {
         </div>
        </div>
     </div>
-    <div className="job-footer p-2 p-md-4">
+    <div className="job-footer p-4 p-md-4 mt-5 py-5">
        <div className="mb-3">
        <h1 className="fs-4">Related Jobs</h1>
         <small className='small text-secondary'>Find out more jobs</small>
