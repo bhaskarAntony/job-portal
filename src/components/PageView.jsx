@@ -19,7 +19,7 @@ function PageView() {
     // Function to fetch data
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3200/api/job/${id}`);
+        const response = await axios.get(`https://stormy-flannel-nightgown-ox.cyclic.app/api/job/${id}`);
         setData(response.data);
         console.log(response.data)
       } catch (error) {

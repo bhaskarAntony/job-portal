@@ -13,7 +13,7 @@ function Home() {
     // Function to fetch data
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3200/api/job/all');
+        const response = await axios.get('https://stormy-flannel-nightgown-ox.cyclic.app/api/job/all');
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
