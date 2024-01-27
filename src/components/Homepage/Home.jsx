@@ -63,8 +63,8 @@ function Home() {
         <div className="row">
             {
                  data.map((item, index) => (
-                   <div className="col-6 col-sm-6 col-md-3 col-lg-2">
-                     <div className="job-post bg-white d-flex flex-column gap-2 rounded-2 align-items-center text-center p-2" key={index}>
+                   <div className="col-6 col-sm-6 col-md-3 col-lg-2 mb-3">
+                     <div className="job-post bg-white d-flex flex-column gap-2 rounded-2 align-items-center text-center p-2 h-100 justify-content-between" key={index}>
                      <img src="https://cdn-icons-png.flaticon.com/128/3688/3688596.png" alt="" />
                      <small className='small text-info'>{item.companyName}</small>
                     <a href={`/jobview/${item._id}`}> <h1 className="fs-5">{item.role}</h1></a>

@@ -26,3 +26,10 @@
     word-spacing: 2px;
     line-height: 2;
 }
+.job-body ul li::marker{
+    content: "✅";
+}
+.job-body img{
+    width: 100%;
+    border-radius: 20px;
+}

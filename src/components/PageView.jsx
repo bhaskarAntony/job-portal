@@ -43,8 +43,8 @@ function PageView() {
                         <h1 className="fs-4">{data.role}</h1>
                         <small className="text-primary small">{data.companyName}</small>
                      <div className="d-flex flex-wrap gap-3">
-                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-clock"></i>{data.date}</p>
-                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-wallet"></i>{data.package}</p>
+                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-clock text-primary"></i>{data.date}</p>
+                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-wallet text-primary"></i>{data.package}</p>
                      </div>
                     </div>
 
@@ -73,10 +73,13 @@ function PageView() {
        </div>
     </div>
     <div className="job-footer p-4 p-md-4 mt-5 py-5">
+        
        <div className="mb-3">
+
        <h1 className="fs-4">Related Jobs</h1>
         <small className='small text-secondary'>Find out more jobs</small>
        </div>
+
        <Home/>
 
     </div>
