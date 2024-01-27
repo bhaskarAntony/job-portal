@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import BasicTabs from './Homepage/Tabs';
+import { useParams } from 'react-router-dom';
 import Home from './Homepage/Home';
 import { Button } from '@mui/material';
 import './pageview.css'
@@ -34,7 +33,7 @@ function PageView() {
   }, []);
   return (
     <div className='overflow-hidden m-0'>
-    <div className=" container-fluid job-top p-4 py-5">
+    <div className=" container-fluid job-top p-4 py-2">
         <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-md-8">
                 <div className="job-left d-flex gap-4 flex-wrap align-items-center">
@@ -43,7 +42,7 @@ function PageView() {
                         <h1 className="fs-4">{data.role}</h1>
                         <small className="text-primary small">{data.companyName}</small>
                      <div className="d-flex flex-wrap gap-3">
-                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-clock text-primary"></i>{data.date}</p>
+                     <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-clock text-primary"></i>{new Date(data.date).toLocaleTimeString()} {new Date(data.date).toLocaleDateString()}</p>
                      <p className='fs-6 text-secondary d-flex gap-2'><i class="bi bi-wallet text-primary"></i>{data.package}</p>
                      </div>
                     </div>
@@ -58,7 +57,7 @@ function PageView() {
             </div>
         </div>
     </div>
-    <div className="container-fluid job-body p-4 p-md-4 py-5">
+    <div className="container-fluid job-body p-4 p-md-4 py-2">
        <div className="row">
         <div className="col-12 col-sm-12 col-md-8">
         <div className="jd">
@@ -72,8 +71,8 @@ function PageView() {
         </div>
        </div>
     </div>
-    <div className="job-footer p-4 p-md-4 mt-5 py-5">
-        
+    <div className="job-footer p-4 p-md-4 mt-5 py-2">
+
        <div className="mb-3">
 
        <h1 className="fs-4">Related Jobs</h1>
