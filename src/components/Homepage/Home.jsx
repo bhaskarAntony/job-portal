@@ -82,6 +82,43 @@ function Home() {
         </div>
       </div>
       ) : (
+       <>
+       <h1 className="fs-4">Filter Jobs</h1>
+       <div className="filter d-flex gap-2 align-items-center flex-wrap">
+       <div className="">
+        {/* <label htmlFor="tech" className="form-label">Technology</label> */}
+       <select name="technology" id="tech" className='form-control rounded-5'>
+       <option value="" selected disabled>Technology</option>
+            <option value="MERN">MERN</option>
+            <option value="MERN">MEAN</option>
+            <option value="MERN">JAVA</option>
+            <option value="MERN">PYTHON</option>
+            <option value="MERN">Digital Marketing</option>
+            <option value="MERN">Data Science</option>
+            <option value="MERN">Cloud Oops</option>
+        </select>
+       </div>
+       <div className="">
+        {/* <label htmlFor="ex" className="form-label">Experience</label> */}
+       <select name="ex" id="ex" className='form-control rounded-5'>
+            <option value="" selected disabled>Experience</option>
+            <option value="MERN">Fresher</option>
+            <option value="MERN">Experience</option>
+        </select>
+       </div>
+       <div className="">
+        {/* <label htmlFor="ex" className="form-label">Experience</label> */}
+       <select name="bond" id="bond" className='form-control rounded-5'>
+            <option value="" selected disabled>Bond</option>
+            <option value="no">Bond is ok</option>
+            <option value="yes">Bond is not ok</option>
+        </select>
+       </div>
+     <div className="">
+     <Button variant='contained' className='p-2 rounded-5'>Applay Filters</Button>
+       </div>
+     </div>
+     <hr />
         <div className="row">
             {
                  data.map((item, index) => (
@@ -113,6 +150,7 @@ function Home() {
                   ))
             }
         </div>
+       </>
        
       )}
     </section>
