@@ -126,8 +126,13 @@ function PageView() {
                     </div>
                     </div>
                      <div className="job-body p-3 bg-white rounded-3 mt-3">
-                     <div className="jd">
-                     <div className='fs-6' dangerouslySetInnerHTML={{ __html: data.jd}} />
+                     <div className="jd d-flex flex-column gap-3">
+                     <Shimmer width="90%" height={15} className='rounded-5'/> <br />
+                    <Shimmer width="80%" height={15} className='rounded-5'/> <br />
+                    <Shimmer width="70%" height={15} className='rounded-5'/> <br />
+                    <Shimmer width="60%" height={15} className='rounded-5'/> <br />
+                    <Shimmer width="50%" height={15} className='rounded-5'/> <br />
+                    <Shimmer width="40%" height={15} className='rounded-5'/> <br />
                      </div>
                      {/* <hr />
                     <div className="icons d-flex gap-2">
@@ -136,25 +141,36 @@ function PageView() {
                      <i className='bi bi-linkedin'></i>
                     </div> */}
                      </div>
+                     <div className="job-footer p-3 bg-white rounded-3 mt-3">
+                    {/* <h1 className="fs-5">{data.companyName}</h1> */}
+                    <Shimmer width="40%" height={20} className='rounded-5'/> <br />
+                    <div className="mt-3">
+                    {/* <i class="bi bi-geo-alt"></i>
+                    <span className='fs-6 text-secondary'>{data.location}</span> */}
+                      <Shimmer width="80%" height={15} className='rounded-5'/> <br />
+                      <Shimmer width="70%" height={15} className='rounded-5'/> <br />
+                      <Shimmer width="60%" height={15} className='rounded-5'/> <br />
+                    </div>
+                   </div>
                    </>
                 ):(
                  <>
                     <div className="job-header p-3 bg-white rounded-3 mt-3">
-                    <span className="d-block fs-5 fw-bold">{data.role}</span>
+                    <span className="d-block fs-5 fw-bold">{data.title}</span>
                     <span className="text-secondary small">{data.companyName}</span>
                     <div className="d-flex gap-3 mt-3 ">
                     <span className="d-block  text-secondary"><i class="bi bi-wallet2  text-secondary"></i> 0-1 years</span>
-                    <span className="d-block  text-secondary">&#8377; 0-1 years</span>
+                    <span className="d-block  text-secondary">&#8377; {data.experience}</span>
                     </div>
                     <div className="d-flex gap-2 mt-3">
                     <i class="bi bi-geo-alt"></i>
-                    <span className='fs-6 text-secondary'>Bangalore Rural,Karnataka, Bengaluru,Karnataka( Richmond Town, Domlur, Indira Nagar, 1A Block Koramangala, HSR Layout, BTM Layout, Manayata Tech Park, Marathahalli, Rajaji Nagar )</span>
+                    <span className='fs-6 text-secondary'>{data.location}</span>
                     </div>
                     <hr />
                     <div className="d-flex gap-3 align-items-center justify-content-between flex-wrap">
                     <div className="d-flex gap-3">
                         <span className="text-secondary small">Posted: <span className="text-black">1 day ago</span></span>
-                        <span className="text-secondary small">Openings: <span className="text-black">6</span></span>
+                        <span className="text-secondary small">Openings: <span className="text-black">{data.openings}</span></span>
                     </div>
                     <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button>
                     </div>
@@ -169,6 +185,13 @@ function PageView() {
                    <i className='bi bi-twitter'></i>
                    <i className='bi bi-linkedin'></i>
                   </div> */}
+                   </div>
+                   <div className="job-footer p-3 bg-white rounded-3 mt-3">
+                    <h1 className="fs-5">{data.companyName}</h1>
+                    <div className="d-flex gap-2 mt-3">
+                    <i class="bi bi-geo-alt"></i>
+                    <span className='fs-6 text-secondary'>{data.location}</span>
+                    </div>
                    </div>
                  </>
                 )
