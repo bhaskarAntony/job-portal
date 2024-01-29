@@ -55,10 +55,14 @@ function Home() {
        </div>
      </div>
       ) : data.length === 0 ? (
-       <div className='d-flex flex-column align-items-center justify-content-center'>
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+        <div className='d-flex flex-column align-items-center justify-content-center p-3 bg-white rounded-2'>
         <i class="bi bi-ban display-1 text-secondary"></i>
-        <h1 className="fs-3">No Jobs Available</h1>
+        <h1 className="fs-3 mt-3">No Jobs Available</h1>
        </div>
+        </div>
+      </div>
       ) : (
         <div className="row">
             {

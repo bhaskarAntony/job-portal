@@ -13,4 +13,10 @@
   .navbar{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+  .nav-link{
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.9px !important;
+    color: #0c0c0c !important;
+  }
   
