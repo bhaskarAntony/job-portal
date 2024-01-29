@@ -83,7 +83,9 @@ function Home() {
       </div>
       ) : (
        <>
-       <h1 className="fs-4">Filter Jobs</h1>
+      <div className="bg-white p-3 rounded-3">
+      <span className="fs-5 d-block">Filter Jobs</span>
+      <small className="small text-secondary">Use filters to find your best job</small>
        <div className="filter d-flex gap-2 align-items-center flex-wrap">
        <div className="">
         {/* <label htmlFor="tech" className="form-label">Technology</label> */}
@@ -115,9 +117,10 @@ function Home() {
         </select>
        </div>
      <div className="">
-     <Button variant='contained' className='p-2 rounded-5'>Applay Filters</Button>
+     <Button variant='contained' className=' rounded-5'><i class="bi bi-filter-left mx-2 text-white fs-4"></i>Apply Filters</Button>
        </div>
      </div>
+      </div>
      <hr />
         <div className="row">
             {
