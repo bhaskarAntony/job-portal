@@ -87,7 +87,7 @@ function Home() {
             </div>
         <div className="d-flex gap-2 ">
         <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button>
-        <Button variant='outlined' className='p-2 rounded-5 px-4'>Learn More</Button>
+       <a href={`/jobview/${item._id}`}> <Button variant='outlined' className='p-2 rounded-5 px-4'>Learn More</Button></a>
         </div>
             </div>
         </div>
