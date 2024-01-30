@@ -16,6 +16,7 @@ function App() {
     <Routes>
         <Route path='/' element={<MainPage/>}/>
         <Route path='/jobview/:id' element={<PageView/>}/>
+        <Route path='/apply/:id' element={<SignUp/>}/>
     </Routes>
     </BrowserRouter>
     </div>
