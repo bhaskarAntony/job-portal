@@ -16,6 +16,7 @@ function Home() {
       try {
         const response = await axios.get('https://stormy-flannel-nightgown-ox.cyclic.app/api/job/all');
         setData(response.data);
+        
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -26,6 +27,28 @@ function Home() {
     // Call the fetchData function
     fetchData();
   }, []);
+  const [tech, setTech] = useState(null)
+  const [bond, setBond] = useState(null)
+
+  const fileterdata = ()=>{
+   if(tech !=null){
+    
+    var filetered = data.filter(item => item.technology == tech)
+    if(bond!=null){
+      filetered = filetered.filter(item =>item.bond == bond)
+    }
+   
+    console.log(data)
+   
+   } 
+   else if(bond!=null){
+    var filetered = data.filter(item => item.bond == bond)
+    if(tech!=null){
+      filetered = filetered.filter(item =>item.technology == tech)
+    }
+  }
+  setData(filetered)
+  }
 
   return (
     <section className='Home'>
@@ -89,9 +112,9 @@ function Home() {
        <div className="filter d-flex gap-2 align-items-center flex-wrap">
        <div className="">
         {/* <label htmlFor="tech" className="form-label">Technology</label> */}
-       <select name="technology" id="tech" className='form-control rounded-5'>
+       <select name="technology" value={tech} id="tech" className='form-control rounded-5' onChange={(e) => { setTech((e.target.value)) }}>
        <option value="" selected disabled>Technology</option>
-            <option value="MERN">MERN</option>
+            <option value="React">MERN</option>
             <option value="MERN">MEAN</option>
             <option value="MERN">JAVA</option>
             <option value="MERN">PYTHON</option>
@@ -104,20 +127,20 @@ function Home() {
         {/* <label htmlFor="ex" className="form-label">Experience</label> */}
        <select name="ex" id="ex" className='form-control rounded-5'>
             <option value="" selected disabled>Experience</option>
-            <option value="MERN">Fresher</option>
-            <option value="MERN">Experience</option>
+            <option value="fresher">Fresher</option>
+            <option value="experience">Experience</option>
         </select>
        </div>
        <div className="">
         {/* <label htmlFor="ex" className="form-label">Experience</label> */}
-       <select name="bond" id="bond" className='form-control rounded-5'>
+       <select name="bond" id="bond" className='form-control rounded-5'  value={bond}  onChange={(e) => { setBond((e.target.value)) }}>
             <option value="" selected disabled>Bond</option>
-            <option value="no">Bond is ok</option>
-            <option value="yes">Bond is not ok</option>
+            <option value="yes">Bond is ok</option>
+            <option value="no">Bond is not ok</option>
         </select>
        </div>
      <div className="">
-     <Button variant='contained' className=' rounded-5'><i class="bi bi-filter-left mx-2 text-white fs-4"></i>Apply Filters</Button>
+     <Button variant='contained' className=' rounded-5' onClick={fileterdata}><i class="bi bi-filter-left mx-2 text-white fs-4"></i>Apply Filters</Button>
        </div>
      </div>
       </div>
@@ -136,6 +159,7 @@ function Home() {
             <div className="d-flex gap-2 mt-3">
             <i class="bi bi-geo-alt"></i>
             <span className='fs-6 text-secondary'>{item.location}</span>
+            <span>{item.technology}</span>
             </div>
             <hr />
             <div className="d-flex gap-3 align-items-center justify-content-between flex-wrap">
