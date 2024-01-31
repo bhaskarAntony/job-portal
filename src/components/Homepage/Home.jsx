@@ -159,7 +159,6 @@ function Home() {
             <div className="d-flex gap-2 mt-3">
             <i class="bi bi-geo-alt"></i>
             <span className='fs-6 text-secondary'>{item.location}</span>
-            <span>{item.technology}</span>
             </div>
             <hr />
             <div className="d-flex gap-3 align-items-center justify-content-between flex-wrap">
