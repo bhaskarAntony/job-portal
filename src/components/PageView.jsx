@@ -172,7 +172,7 @@ function PageView() {
                         <span className="text-secondary small">Posted: <span className="text-black">1 day ago</span></span>
                         <span className="text-secondary small">Openings: <span className="text-black">{data.openings}</span></span>
                     </div>
-                    <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button>
+                 <a href={data.link}>   <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button></a>
                     </div>
                 </div>
                    <div className="job-body p-3 bg-white rounded-3 mt-3">

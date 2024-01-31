@@ -168,7 +168,7 @@ function Home() {
                 <span className="text-secondary small">Openings: <span className="text-black">{item.openings}</span></span>
             </div>
         <div className="d-flex gap-2 ">
-       <a href={`/apply/${item._id}`}> <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button></a>
+       <a href={item.link}> <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button></a>
        <a href={`/jobview/${item._id}`}> <Button variant='outlined' className='p-2 rounded-5 px-4'>Learn More</Button></a>
         </div>
             </div>
