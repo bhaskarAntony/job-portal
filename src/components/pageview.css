@@ -84,12 +84,15 @@
         align-items: center;
         gap: 20px;
         padding: 10px;
+        scroll-snap-type: x mandatory;
     }
     /* .intrestedjobs::-webkit-scrollbar{
         display: none;
     } */
     .i-job-card{
-        min-width: 300px !important;
+        min-width: 280px !important;
+        scroll-snap-align: center;
     }
+
 
 }
