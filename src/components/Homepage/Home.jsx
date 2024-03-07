@@ -125,19 +125,19 @@ function Home() {
        </div>
        <div className="">
         {/* <label htmlFor="ex" className="form-label">Experience</label> */}
-       <select name="ex" id="ex" className='form-control rounded-5'>
+       {/* <select name="ex" id="ex" className='form-control rounded-5'>
             <option value="" selected disabled>Experience</option>
             <option value="fresher">Fresher</option>
             <option value="experience">Experience</option>
-        </select>
+        </select> */}
        </div>
        <div className="">
         {/* <label htmlFor="ex" className="form-label">Experience</label> */}
-       <select name="bond" id="bond" className='form-control rounded-5'  value={bond}  onChange={(e) => { setBond((e.target.value)) }}>
+       {/* <select name="bond" id="bond" className='form-control rounded-5'  value={bond}  onChange={(e) => { setBond((e.target.value)) }}>
             <option value="" selected disabled>Bond</option>
             <option value="yes">Bond is ok</option>
             <option value="no">Bond is not ok</option>
-        </select>
+        </select> */}
        </div>
      <div className="">
      <Button variant='contained' className=' rounded-5' onClick={fileterdata}><i class="bi bi-filter-left mx-2 text-white fs-4"></i>Apply Filters</Button>

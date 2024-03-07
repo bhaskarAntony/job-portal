@@ -39,13 +39,15 @@ function Simple() {
       ) : (
         data.map((item, index) => (
         <div className='simple-card card d-flex gap-3'>
-           <div className="d-flex gap-3">
+          <a href="">
+          <div className="d-flex gap-3">
            <img src="https://cdn-icons-png.flaticon.com/128/1533/1533907.png" alt="" />
            <div>
             <span className='fs-5 d-block'>{item.companyName}</span>
             <small className='small text-secondary'>{item.role}</small>
            </div>
            </div>
+          </a>
         </div>
         ))
       )}

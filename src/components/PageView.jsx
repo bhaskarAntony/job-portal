@@ -156,11 +156,21 @@ function PageView() {
                 ):(
                  <>
                     <div className="job-header p-3 bg-white rounded-3 mt-3">
+                     {
+                      data.bond=="yes"?(
+                        <>
+                         <div className="alert alert-warning">
+                          <h1 className="alert-subtitle small">Information</h1>
+                          <h1 className="alert-title fs-5">This Job Required Bond Agremenet</h1>
+                        </div>
+                        </>
+                      ):(null)
+                     }
                     <span className="d-block fs-5 fw-bold">{data.title}</span>
                     <span className="text-secondary small">{data.companyName}</span>
                     <div className="d-flex gap-3 mt-3 ">
-                    <span className="d-block  text-secondary"><i class="bi bi-wallet2  text-secondary"></i> 0-1 years</span>
-                    <span className="d-block  text-secondary">&#8377; {data.experience}</span>
+                    <span className="d-block  text-secondary"><i class="bi bi-app-indicator  text-secondary"></i> 0-1 years</span>
+                    <span className="d-block  text-secondary"><i className='bi  bi-wallet2 text-secondary'></i> {data.package}</span>
                     </div>
                     <div className="d-flex gap-2 mt-3">
                     <i class="bi bi-geo-alt"></i>
@@ -172,7 +182,7 @@ function PageView() {
                         <span className="text-secondary small">Posted: <span className="text-black">1 day ago</span></span>
                         <span className="text-secondary small">Openings: <span className="text-black">{data.openings}</span></span>
                     </div>
-                 <a href={data.link}>   <Button variant='contained' className='p-2 rounded-5 px-4'>Apply for job</Button></a>
+                 <a href={data.link}>   <Button variant='contained' className='p-2 rounded-5 px-4' data-bs-toggle="modal" data-bs-target="#exampleModal">Apply for job</Button></a>
                     </div>
                 </div>
                    <div className="job-body p-3 bg-white rounded-3 mt-3">
@@ -210,6 +220,40 @@ function PageView() {
     </div>
     </div>
     </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fs-6" id="exampleModalLabel">{data.title}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div className="form-group mt-2">
+          <label htmlFor="" className="form-label">Student Name</label>
+          <input type="text" className="form-control"  name='username' placeholder='Enter your anme'/>
+        </div>
+        <div className="form-group mt-2">
+          <label htmlFor="" className="form-label">Phone Number</label>
+          <input type="text" className="form-control"  name='username' placeholder='Enter your anme'/>
+        </div>
+        <div className="form-group mt-2">
+          <label htmlFor="" className="form-label">Passed out year</label>
+          <input type="text" className="form-control"  name='username' placeholder='Enter your anme'/>
+        </div>
+        <div className="form-group mt-2">
+          <label htmlFor="" className="form-label">Qualification</label>
+          <textarea name="address" id="" cols="30" rows="5" className='form-control'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer d-flex gap-3">
+      <Button variant='outline' className='p-2 rounded-5 px-4 border' data-bs-dismiss="modal" aria-label="Close">Cancel</Button>
+       <Button variant='contained' className='p-2 rounded-5 px-4'>Submit</Button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   )
 }

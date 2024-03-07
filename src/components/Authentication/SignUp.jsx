@@ -11,6 +11,7 @@ function SignUp() {
 const [data, setData] = useState([]);
 // State to track loading state
 const [loading, setLoading] = useState(true);
+const [status, setStatus] = useState(null);
 
 useEffect(() => {
   // Function to fetch data
