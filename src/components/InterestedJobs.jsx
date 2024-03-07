@@ -26,10 +26,12 @@ function InterestedJobs() {
     fetchData();
   }, []);
   return (
-    <div className='bg-white'>
-      {
+    <div className='bg-white '>
+    <div className="intrestedjobs">
+    {
         data.map((item, index)=>(
-            <div className="job-header p-3 bg-white rounded-3 mt-3">
+          <div className="i-job-card">
+              <div className="job-header p-3 bg-white rounded-3 mt-3">
             <a href={`/jobview/${item._id}`} className='text-black'><span className="d-block fs-5 fw-bold">{item.title}</span></a>
             <span className="text-secondary small">{item.companyName}</span>
             <div className="d-flex gap-3 mt-3 ">
@@ -47,8 +49,10 @@ function InterestedJobs() {
             </div>
           
         </div>
+          </div>
         ))
       }
+    </div>
       <div className="d-flex align-items-center justify-content-center mt-3">
         <Button variant='outlined' className='p-2 rounded-5 px-4'>View All</Button>
       </div>

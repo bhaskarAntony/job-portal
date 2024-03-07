@@ -76,3 +76,20 @@
 .card{
     border: 1px solid #dadada !important;
 }
+
+@media(max-width:768px){
+    .intrestedjobs{
+        display: flex !important;
+        overflow: auto;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+    /* .intrestedjobs::-webkit-scrollbar{
+        display: none;
+    } */
+    .i-job-card{
+        min-width: 300px !important;
+    }
+
+}
