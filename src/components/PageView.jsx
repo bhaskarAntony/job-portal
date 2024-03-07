@@ -161,7 +161,7 @@ function PageView() {
                         <>
                          <div className="alert alert-warning">
                           <h1 className="alert-subtitle small">Information</h1>
-                          <h1 className="alert-title fs-5">This Job is Required Bond.</h1>
+                          <h1 className="alert-title fs-6">This Job is Required Bond.</h1>
                         </div>
                         </>
                       ):(null)
